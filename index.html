@@ -3,45 +3,78 @@
 	<head>
 		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 		<script src="http://www.yvoschaap.com/ytpage/ytembed.js" type="text/javascript"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js" type="text/javascript"></script>
 	</head>
 	<body>
-		<b>Top 10 UK Singles:</b>
+		<h1>Top 10 UK Singles</h1>
+		<h2 id="date"></h2>
+		<h3>number one</h3>
 		<div id="1"></div>
-		<div id="2"></div>
-		<div id="3"></div>
-		<div id="4"></div>
-		<div id="5"></div>
-		<div id="6"></div>
-		<div id="7"></div>
-		<div id="8"></div>
-		<div id="9"></div>
-		<div id="10"></div>
 		<script type="text/javascript">
 			ytEmbed.init({'block':'1','q':'ellie goulding love me like you do','type':'search','results':1,'order':'most_relevance','player':'embed','layout':'full'});
+		</script>
+		<h3>number two</h3>
+		<div id="2"></div>
+		<script type="text/javascript">
 			ytEmbed.init({'block':'2','q':'ellie goulding love me like you do','type':'search','results':1,'order':'most_relevance','player':'embed','layout':'full'});
+		</script>
+		<h3>number three</h3>
+		<div id="3"></div>
+		<script type="text/javascript">
 			ytEmbed.init({'block':'3','q':'ellie goulding love me like you do','type':'search','results':1,'order':'most_relevance','player':'embed','layout':'full'});
+		</script>
+		<h3>number four</h3>
+		<div id="4"></div>
+		<script type="text/javascript">
 			ytEmbed.init({'block':'4','q':'ellie goulding love me like you do','type':'search','results':1,'order':'most_relevance','player':'embed','layout':'full'});
+		</script>
+		<h3>number five</h3>
+		<div id="5"></div>
+		<script type="text/javascript">
 			ytEmbed.init({'block':'5','q':'ellie goulding love me like you do','type':'search','results':1,'order':'most_relevance','player':'embed','layout':'full'});
+		</script>
+		<h3>number six</h3>
+		<div id="6"></div>
+		<script type="text/javascript">
 			ytEmbed.init({'block':'6','q':'ellie goulding love me like you do','type':'search','results':1,'order':'most_relevance','player':'embed','layout':'full'});
+		</script>
+		<h3>number seven</h3>
+		<div id="7"></div>
+		<script type="text/javascript">
 			ytEmbed.init({'block':'7','q':'ellie goulding love me like you do','type':'search','results':1,'order':'most_relevance','player':'embed','layout':'full'});
+		</script>
+		<h3>number eight</h3>
+		<div id="8"></div>
+		<script type="text/javascript">
 			ytEmbed.init({'block':'8','q':'ellie goulding love me like you do','type':'search','results':1,'order':'most_relevance','player':'embed','layout':'full'});
+		</script>
+		<h3>number nine</h3>
+		<div id="9"></div>
+		<script type="text/javascript">
 			ytEmbed.init({'block':'9','q':'ellie goulding love me like you do','type':'search','results':1,'order':'most_relevance','player':'embed','layout':'full'});
+		</script>
+		<h3>number ten</h3>
+		<div id="10"></div>
+		<script type="text/javascript">
 			ytEmbed.init({'block':'10','q':'ellie goulding love me like you do','type':'search','results':1,'order':'most_relevance','player':'embed','layout':'full'});
 		</script>
 		<p id="top10"></p>
 		<script>
-			$( "#top10" ).load( "http://ben-major.co.uk/labs/top40/api/singles/" );
-			/*$.getJSON( "http://ben-major.co.uk/labs/top40/api/singles/", function( data ) {
-			  var items = [];
-			  $.each( data, function( key, val ) {
-			    items.push( "<li id='" + key + "'>" + val + "</li>" );
-			  });
-			 
-			  $( "<ul/>", {
-			    "class": "my-new-list",
-			    html: items.join( "" )
-			  }).appendTo( "body" );
-			});*/
+			//$( "#top10" ).load( "http://ben-major.co.uk/labs/top40/api/singles/" );
+			$.getJSON( "http://ben-major.co.uk/labs/top40/api/singles/", function( data ) {
+				var items = [];
+				$.each( data, function( key, val ) {
+			 		items.push( "<li id='" + key + "'>" + val + "</li>" );
+			 	});
+			 	$(#date).html(moment.unix(items[0]););
+				$( "<ul/>", {
+			    	"class": "my-new-list",
+			    	html: items.join( "" )
+				}).appendTo( "body" );
+
+				var top_songs = jQuery.parseJSON(data);
+				
+			});
 		</script>
 	</body>
 </html>
