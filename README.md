@@ -26,3 +26,12 @@ automatic youtube embedding
 <script type="text/javascript">
 	ytEmbed.init({'block':'ytThumbs','q':'ellie goulding love me like you do','type':'search','results':1,'order':'most_relevance','player':'embed','layout':'full'});
 </script>
+
+http://www.yvoschaap.com/youtube.html
+
++some custom jquery
+
+chart loading
+-------------
+
+jquery code to load current top40 from endpoint url : "http://ben-major.co.uk/labs/top40/api/singles/" and cut it down to the top ten, before feeding this data into the page layout..
