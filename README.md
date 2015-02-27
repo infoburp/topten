@@ -16,4 +16,13 @@ ordered list of top ten positions
 	<li>ARTIST-TITLE</li>
 </ol>
 
-colour by change (down=red value,up=green value,blue=no move)
+colour background by change (down=red value,up=green value,blue=no move)
+
+automatic youtube embedding
+---------------------------
+<script src="http://www.yvoschaap.com/ytpage/ytembed.js" type="text/javascript"></script>
+<div id="ytThumbs"></div>
+
+<script type="text/javascript">
+	ytEmbed.init({'block':'ytThumbs','q':'ellie goulding love me like you do','type':'search','results':1,'order':'most_relevance','player':'embed','layout':'full'});
+</script>
